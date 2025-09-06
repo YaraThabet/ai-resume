@@ -6,6 +6,7 @@
   --font-sans: "Mona Sans", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-dark-200: #475467;
+  
   --color-light-blue-100: #c1d3f81a;
   --color-light-blue-200: #a7bff14d;
 
@@ -31,7 +32,7 @@ h1 {
 }
 
 h2 {
-  @apply max-sm:text-xl text-3xl text-dark-200;
+  @apply max-sm:text-xl text-3xl text-indigo-300;
 }
 
 label {
@@ -57,8 +58,9 @@ form {
     @apply bg-gradient-to-b from-light-blue-100 to-light-blue-200 p-4 rounded-2xl;
   }
   .primary-button {
-    @apply primary-gradient text-white rounded-full px-4 py-2 cursor-pointer w-full;
+    @apply primary-gradient text-white rounded-full px-4 py-2 cursor-pointer ;
   }
+
   .resume-nav {
     @apply flex flex-row justify-between items-center p-4 border-b border-gray-200;
   }
@@ -78,14 +80,14 @@ form {
     @apply flex flex-col items-center gap-8 pt-12 max-sm:mx-2 mx-15 pb-5;
   }
   .page-heading {
-    @apply flex flex-col items-center gap-8 max-w-4xl text-center max-sm:gap-4;
+    @apply flex flex-col items-center gap-8 max-w-4xl text-center max-sm:gap-4; ;
   }
   .resumes-section {
     @apply flex flex-wrap max-md:flex-col max-md:gap-4 gap-6 items-start max-md:items-center w-full max-w-[1850px] justify-evenly;
   }
 
   .resume-card {
-    @apply flex flex-col gap-8 h-[560px] w-[350px] lg:w-[430px] xl:w-[490px] bg-white rounded-2xl p-4;
+    @apply shadow-card flex flex-col gap-8  mt-10 h-[560px] w-[350px] lg:w-[430px] xl:w-[400px] bg-[#141d3b] rounded-2xl p-4;
   }
 
   .resume-card-header {
@@ -97,7 +99,10 @@ form {
   }
 
   .navbar {
-    @apply flex flex-row justify-between items-center bg-white rounded-full p-4 w-full px-10 max-w-[1200px] mx-auto;
+    @apply flex flex-row justify-between items-center bg-indigo-950 border-2 border-blue-900 rounded-full px-10 p-4 w-[90%] lg:w-full sm:w-full md:w-[700px] max-w-[1200px] mx-auto;
+  }
+    .navbar:hover {
+    @apply  bg-indigo-900 border-2 border-blue-800 ;
   }
 
   .score-badge {
@@ -121,7 +126,7 @@ form {
 }
 
 @utility text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#AB8C95] via-[#000000] to-[#8E97C5];
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#1764e9] via-[#c87d7d] to-[#c335be];
 }
 
 @utility gradient-hover {
@@ -130,7 +135,10 @@ form {
 
 @utility primary-gradient {
   background: linear-gradient(to bottom, #8e98ff, #606beb);
-  box-shadow: 0px 74px 21px 0px #6678ef00;
+  box-shadow: 0px 10px 100px 0px #6678ef;
+}
+@utility shadow-card{
+  box-shadow: 0px 10px 20px 0px #28315d 
 }
 
 @utility primary-gradient-hover {
